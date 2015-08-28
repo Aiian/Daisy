@@ -1,0 +1,106 @@
+
+//colors
+
+$highlight: #005f50;
+
+//background
+
+.lightBackground {
+  background-color: rgba(240,240,240,0.7);
+  border-radius: 0.5em;
+  box-shadow: inset 0px 0px 10px 1px rgba(0,95,80,1);
+}
+
+//borders
+
+$standardBottomBorder: 1px solid $highlight;
+
+.bottomBorder {
+  border-bottom: $standardBottomBorder;
+}
+
+
+  //fonts
+
+  @font-face {
+    font-family: 'alegreyabold';
+    src: url('../fonts/alegreya/alegreya-bold-webfont.eot');
+    src: url('../fonts/alegreya/alegreya-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/alegreya/alegreya-bold-webfont.woff2') format('woff2'),
+    url('../fonts/alegreya/alegreya-bold-webfont.woff') format('woff'),
+    url('../fonts/alegreya/alegreya-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'alegreyaitalic';
+    src: url('../fonts/alegreya/alegreya-italic-webfont.eot');
+    src: url('../fonts/alegreya/alegreya-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/alegreya/alegreya-italic-webfont.woff2') format('woff2'),
+    url('../fonts/alegreya/alegreya-italic-webfont.woff') format('woff'),
+    url('../fonts/alegreya/alegreya-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'alegreyaregular';
+    src: url('../fonts/alegreya/alegreya-regular-webfont.eot');
+    src: url('../fonts/alegreya/alegreya-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/alegreya/alegreya-regular-webfont.woff2') format('woff2'),
+    url('../fonts/alegreya/alegreya-regular-webfont.woff') format('woff'),
+    url('../fonts/alegreya/alegreya-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  $mainFont: alegreyaregular;
+  $italicFont: alegreyaitalic;
+  $boldFont: alegreyabold;
+
+  $Xlarge: 3em;
+  $large: 2em;
+  $normal: 1.5em;
+  $small: 1em;
+
+  //element size
+
+  $thumbnailImgSize: 9em;
+  $historyImgSize: 12em;
+  $thumbnailTextBoxSize: 30em;
+
+  //photos
+
+  #thumbPhoto_1 {  background-image: url('../images/food/soczek.jpg');  }
+  #thumbPhoto_2 {  background-image: url('../images/food/kanapka.jpg');  }
+  #thumbPhoto_3 {  background-image: url('../images/food/muffiny.jpg');  }
+  #thumbPhoto_4 {  background-image: url('../images/food/maliny.jpg');  }
+
+  #daisyPhoto_1 { background-image: url('../images/daisy_1.jpg');}
+  #daisyPhoto_2 { background-image: url('../images/daisy_2.jpg');}
+  #daisyPhoto_3 { background-image: url('../images/daisy_3.jpg');}
+
+
+  //buttons
+
+  .simpleButton {
+    width: 4em;
+    background-color: rgba(240,240,240,0.3);
+    border-radius: 0.5em;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,95,80,1);
+    font-family: $boldFont;
+    font-size: $normal;
+    text-align: center;
+    margin: 1em;
+    padding: 0.5em;
+    justify-content: center;
+    &:hover {
+      color: white;
+      background-color: $highlight;
+      cursor: alias;
+    }
+  }
+
+
+

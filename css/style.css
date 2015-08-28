@@ -1,0 +1,202 @@
+.lightBackground {
+  background-color: rgba(240, 240, 240, 0.7);
+  border-radius: 0.5em;
+  box-shadow: inset 0px 0px 10px 1px #005f50; }
+
+.bottomBorder {
+  border-bottom: 1px solid #005f50; }
+
+@font-face {
+  font-family: 'alegreyabold';
+  src: url("../fonts/alegreya/alegreya-bold-webfont.eot");
+  src: url("../fonts/alegreya/alegreya-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alegreya/alegreya-bold-webfont.woff2") format("woff2"), url("../fonts/alegreya/alegreya-bold-webfont.woff") format("woff"), url("../fonts/alegreya/alegreya-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'alegreyaitalic';
+  src: url("../fonts/alegreya/alegreya-italic-webfont.eot");
+  src: url("../fonts/alegreya/alegreya-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alegreya/alegreya-italic-webfont.woff2") format("woff2"), url("../fonts/alegreya/alegreya-italic-webfont.woff") format("woff"), url("../fonts/alegreya/alegreya-italic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'alegreyaregular';
+  src: url("../fonts/alegreya/alegreya-regular-webfont.eot");
+  src: url("../fonts/alegreya/alegreya-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alegreya/alegreya-regular-webfont.woff2") format("woff2"), url("../fonts/alegreya/alegreya-regular-webfont.woff") format("woff"), url("../fonts/alegreya/alegreya-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+#thumbPhoto_1 {
+  background-image: url("../images/food/soczek.jpg"); }
+
+#thumbPhoto_2 {
+  background-image: url("../images/food/kanapka.jpg"); }
+
+#thumbPhoto_3 {
+  background-image: url("../images/food/muffiny.jpg"); }
+
+#thumbPhoto_4 {
+  background-image: url("../images/food/maliny.jpg"); }
+
+#daisyPhoto_1 {
+  background-image: url("../images/daisy_1.jpg"); }
+
+#daisyPhoto_2 {
+  background-image: url("../images/daisy_2.jpg"); }
+
+#daisyPhoto_3 {
+  background-image: url("../images/daisy_3.jpg"); }
+
+.simpleButton {
+  width: 4em;
+  background-color: rgba(240, 240, 240, 0.3);
+  border-radius: 0.5em;
+  box-shadow: inset 0px 0px 10px 1px #005f50;
+  font-family: alegreyabold;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em;
+  padding: 0.5em;
+  justify-content: center; }
+  .simpleButton:hover {
+    color: white;
+    background-color: #005f50;
+    cursor: alias; }
+
+body {
+  font-family: alegreyaregular;
+  color: #005f50;
+  font-size: 16px; }
+  body::after {
+    content: "";
+    background-image: url("../images/jumbojumbo.jpg");
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
+
+body * {
+  display: flex;
+  box-sizing: border-box; }
+
+.flex-col {
+  flex-direction: column; }
+
+.centerContent {
+  justify-content: center;
+  align-items: center; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2em;
+  padding: 0.5em 0.5em 0.2em 0.5em;
+  justify-content: center; }
+
+p {
+  font-size: 1.5em;
+  padding: 1em;
+  text-align: center; }
+
+header {
+  padding: 1em 0 1.5em 0; }
+  header ul {
+    border-top: 1px solid #005f50;
+    border-bottom: 1px solid #005f50;
+    width: 40vw;
+    margin: 0 1em;
+    font-size: 1.5em;
+    justify-content: space-around;
+    font-family: alegreyabold; }
+    header ul li {
+      width: 33%;
+      height: 100%;
+      justify-content: center;
+      padding: 0.5em 0 0.5em 0;
+      border-bottom: 3px solid transparent;
+      background-color: rgba(240, 240, 240, 0.5); }
+
+main {
+  position: relative; }
+  main > .flex-col {
+    position: relative;
+    width: 70vw;
+    padding: 0 10vw; }
+
+#visibleRange {
+  width: 70vw;
+  padding: 1em 0;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.totalRange {
+  width: 3200px; }
+
+.wide {
+  width: 80vw;
+  padding: 0 5vw; }
+
+h1 {
+  font-size: 3em;
+  font-family: alegreyabold; }
+
+#home .simpleButton {
+  width: 40%; }
+
+.thumbnail {
+  padding: 0.6em 0;
+  justify-content: center; }
+  .thumbnail:nth-of-type(2n) {
+    padding-left: 9em; }
+
+.roundedImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 75%;
+  height: 75%; }
+
+.outerFancyBorder {
+  background-image: url("../images/imgRounding.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9em;
+  height: 9em;
+  transform: scale(1.2); }
+
+.textContainer {
+  width: 30em;
+  overflow: hidden;
+  align-self: baseline;
+  margin: 0 0 0 2em; }
+  .textContainer h3 {
+    border-bottom: 1px solid #005f50;
+    width: 100%;
+    font-family: alegreyabold;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+  .textContainer p {
+    display: none;
+    font-size: 1em; }
+
+.banner {
+  position: relative;
+  overflow: auto;
+  height: 50%;
+  width: 100%;
+  padding: 1em 0;
+  overflow-x: visible;
+  overflow-y: visible; }
+  .banner li {
+    display: none; }
+
+.active {
+  display: flex !important; }
+
+#historia .outerFancyBorder {
+  width: 12em;
+  height: 12em;
+  transform: scale(1.2); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+main {
+  position: relative;
+
+  > .flex-col {
+    position: relative;
+    width: 70vw;
+    padding: 0 10vw;
+  }
+}
+
+#visibleRange {
+  width: 70vw;
+  padding: 1em 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.totalRange {
+  width: 3200px;
+}
+
+.wide {
+  width: 80vw;
+  padding: 0 5vw;
+}

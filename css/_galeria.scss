@@ -1,0 +1,17 @@
+.banner {
+  position: relative;
+  overflow: auto;
+  height: 50%;
+  width: 100%;
+  padding: 1em 0;
+  overflow-x: visible;
+  overflow-y: visible;
+  li {
+    display: none;
+  }
+}
+
+.active {
+  display: flex !important;
+}
+

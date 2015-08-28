@@ -1,0 +1,48 @@
+.thumbnail {
+  padding: 0.6em 0;
+  justify-content: center;
+  &:nth-of-type(2n) {
+    padding-left: $thumbnailImgSize;
+  }
+}
+
+.roundedImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 75%;
+  height: 75%;
+
+}
+
+.outerFancyBorder {
+  background-image: url('../images/imgRounding.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $thumbnailImgSize;
+  height: $thumbnailImgSize;
+  transform: scale(1.2);
+
+}
+
+.textContainer {
+  width: $thumbnailTextBoxSize;
+  overflow: hidden;
+  align-self: baseline;
+  margin: 0 0 0 2em;
+
+  h3 {
+    border-bottom: $standardBottomBorder;
+    width: 100%;
+    font-family: $boldFont;
+    font-size: $normal;
+    text-transform: uppercase;
+  }
+  p {
+    display: none;
+    font-size: $small;
+  }
+
+}
