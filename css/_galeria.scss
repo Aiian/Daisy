@@ -6,12 +6,38 @@
   padding: 1em 0;
   overflow-x: visible;
   overflow-y: visible;
-  li {
-    display: none;
+    p {
+      margin: 1em 0 0 0;
+      width: 70%;
+      justify-content: center;
+    }
+  .imgContainer {
+    height: 20em;
+
+
+      img {
+        width: auto;
+        height: 100%;
+      }
   }
 }
 
-.active {
-  display: flex !important;
+.spread {
+  justify-content: space-around;
+  width: 100%;
+  .bulletContainer {
+
+    .bullet {
+      width: 1em;
+      height: 1em;
+      background-color: white;
+      border: 1px solid $highlight;
+      border-radius: 50%;
+      margin: 0 0.3em;
+      &:first-child {
+        background-color: $highlight;
+      }
+    }
+  }
 }
 

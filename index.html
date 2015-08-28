@@ -21,7 +21,7 @@
             <ul id="rightNav">
                 <li id="linkHistoria">Historia</li>
                 <li id="linkAtelier">Atelier</li>
-                <li id="linkKontakt">Kontakt</li>
+                <li class="linkKontakt">Kontakt</li>
             </ul>
         </nav>
     </header>
@@ -29,83 +29,89 @@
         <div id="visibleRange">
             <div class="totalRange">
                 <main>
-
                     <section class="flex-col" id="home">
                         <div class="lightBackground flex-col centerContent">
                             <h1 class="bottomBorder">Bistro "Daisy" już otwarte!</h1>
                             <h2>Zapraszamy</h2>
                             <p>Poniedziałek - Sobota <br>8.00 - 17.00</p>
                             <p>Zakład Przyrodoleczniczy w Szczawnie-Zdroju <br> ul. Sienkiewicza 1</p>
-                            <div class="simpleButton">Jak dojadę?</div>
+                            <div class="simpleButton linkKontakt">Jak dojadę?</div>
                         </div>
-
                     </section>
 
                     <section class="flex-col" id="menu">
 
-                            <div class="thumbnail">
-                                <div class="centerContent">
-                                    <div class="outerFancyBorder centerContent">
-                                        <div class="roundedImg" id="thumbPhoto_1"></div>
-                                    </div>
-                                </div>
-                                <div class="textContainer lightBackground flex-col">
-                                    <h3>Freshly squeezed juices</h3>
-                                    <p>We only lorem ipsum super juices and from thesuper juices and from the best ipsum lorem oranges, on best ipsum lorem oranges, only with lorem ipsum igredients.</p>
+                        <div class="thumbnail">
+                            <div class="centerContent">
+                                <div class="outerFancyBorder centerContent">
+                                    <div class="roundedImg" id="thumbPhoto_1"></div>
                                 </div>
                             </div>
+                            <div class="textContainer lightBackground flex-col">
+                                <h3>Freshly squeezed juices</h3>
 
-                            <div class="thumbnail">
-                                <div class="centerContent">
-                                    <div class="outerFancyBorder centerContent">
-                                        <div class="roundedImg" id="thumbPhoto_2"></div>
-                                    </div>
-                                </div>
-                                <div class="textContainer lightBackground flex-col">
-                                    <h3>Tasty sandwiches</h3>
-                                    <p>We only lorem ipsum super jsuper juices and from the best ipsum lorem oranges, onuices and from the best ipsum lorem oranges, only with lorem ipsum igredients.</p>
+                                <p>We only lorem ipsum super juices and from thesuper juices and from the best ipsum
+                                    lorem oranges, on best ipsum lorem oranges, only with lorem ipsum igredients.</p>
+                            </div>
+                        </div>
+
+                        <div class="thumbnail">
+                            <div class="centerContent">
+                                <div class="outerFancyBorder centerContent">
+                                    <div class="roundedImg" id="thumbPhoto_2"></div>
                                 </div>
                             </div>
+                            <div class="textContainer lightBackground flex-col">
+                                <h3>Tasty sandwiches</h3>
 
-                            <div class="thumbnail">
-                                <div class="centerContent">
-                                    <div class="outerFancyBorder centerContent">
-                                        <div class="roundedImg" id="thumbPhoto_3"></div>
-                                    </div>
-                                </div>
-                                <div class="textContainer lightBackground flex-col">
-                                    <h3>Yummy pastries</h3>
-                                    <p>We only lorem ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from the best ipsum lorem oranges, only with lorem ipsum igredients.</p>
+                                <p>We only lorem ipsum super jsuper juices and from the best ipsum lorem oranges,
+                                    onuices and from the best ipsum lorem oranges, only with lorem ipsum igredients.</p>
+                            </div>
+                        </div>
+
+                        <div class="thumbnail">
+                            <div class="centerContent">
+                                <div class="outerFancyBorder centerContent">
+                                    <div class="roundedImg" id="thumbPhoto_3"></div>
                                 </div>
                             </div>
+                            <div class="textContainer lightBackground flex-col">
+                                <h3>Yummy pastries</h3>
 
-                            <div class="thumbnail">
-                                <div class="centerContent">
-                                    <div class="outerFancyBorder centerContent">
-                                        <div class="roundedImg" id="thumbPhoto_4"></div>
-                                    </div>
-                                </div>
-                                <div class="textContainer lightBackground flex-col">
-                                    <h3>Pycha malyny</h3>
-                                    <p>We only lorem ipsum super juices and from the best isuper juices and from the best ipsum lorem oranges, onpsum lorem oranges, only with lorem ipsum igredients.</p>
-                                </div>
-
+                                <p>We only lorem ipsuper juices and from the best ipsum lorem oranges, onsum super
+                                    juices and from the best ipsum lorem oranges, only with lorem ipsum igredients.</p>
                             </div>
-                        </section>
+                        </div>
+
+                        <div class="thumbnail">
+                            <div class="centerContent">
+                                <div class="outerFancyBorder centerContent">
+                                    <div class="roundedImg" id="thumbPhoto_4"></div>
+                                </div>
+                            </div>
+                            <div class="textContainer lightBackground flex-col">
+                                <h3>Pycha malyny</h3>
+
+                                <p>We only lorem ipsum super juices and from the best isuper juices and from the best
+                                    ipsum lorem oranges, onpsum lorem oranges, only with lorem ipsum igredients.</p>
+                            </div>
+
+                        </div>
+                    </section>
 
                     <section class="flex-col wide" id="galeria">
                         <div class="lightBackground flex-col centerContent">
                             <h1 class="bottomBorder">Zobacz co się u nas dzieje.</h1>
-                            <div class="banner centerContent">
-                                <ul>
-                                    <li class=" flex-col centerContent active"><img src="images/food/pomodore.jpg"><p>Słodkie pomodore</p></li>
-                                    <li><img src="images/food/sandwich2.jpg"></li>
-                                    <li><img src="images/food/sandwich2.jpg"></li>
-                                </ul>
+                            <div class="banner centerContent flex-col">
+                                <div class="flex-col centerContent imgContainer"><img class="lightBackground currentPhoto" src="#"></div>
+                                <p class="lightBackground currentParagraph"></p>
                             </div>
-                            <div>
-                                <div class="simpleButton"> < </div>
-                                <div class="simpleButton"> > </div>
+                            <div class="spread">
+                                <div class="simpleButton" id="galleryLeft"> &#60 </div>
+                                <div class="bulletContainer centerContent">
+
+                                </div>
+                                <div class="simpleButton" id="galleryRight"> &#62 </div>
                             </div>
                         </div>
                     </section>
@@ -145,6 +151,79 @@
                             </div>
                         </div>
                     </section>
+
+                    <section class="flex-col wide" id="atelier">
+                        <div class="lightBackground flex-col">
+                            <h1 class="bottomBorder centerContent">Zapraszamy na wystawy i&nbspkoncerty w Daisy</h1>
+
+                            <div class="wystawa flex-col">
+                                <div class="spread">
+                                    <h4>Wystawa młodego i zdolnego artysty</h4>
+                                    <p>24.09 - 31.09</p>
+                                </div>
+                                <p class="caption">Rezerwacje i bilety do nabycia na miejscu</p>
+                                <p class="description"> lorem ipsum itp. ipsuper juices and from the best ipsum lorem ora
+                                nges, onsum super juices and from the best ipsum ipsuper juices and from the best ip
+                                sum lorem oranges, onsum super juices and from the best ipsum lo
+                                ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from t
+                                ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from the best ipsum lo
+                                he best ipsum lolo"
+                                </p>
+                            </div>
+
+                            <div class="wystawa flex-col">
+                                <div class="spread">
+                                    <h4>Wystawa młodego i zdolnego artysty</h4>
+                                    <p>24.09 - 31.09</p>
+                                </div>
+                                <p class="caption">Rezerwacje i bilety do nabycia na miejscu</p>
+                                <p class="description"> lorem ipsum itp. ipsuper juices and from the best ipsum lorem ora
+                                    nges, onsum super juices and from the best ipsum ipsuper juices and from the best ip
+                                    sum lorem oranges, onsum super juices and from the best ipsum lo
+                                    ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from t
+                                    ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from the best ipsum lo
+                                    he best ipsum lolo"
+                                </p>
+                            </div>
+
+                            <div class="wystawa flex-col">
+                                <div class="spread">
+                                    <h4>Wystawa młodego i zdolnego artysty</h4>
+                                    <p>24.09 - 31.09</p>
+                                </div>
+                                <p class="caption">Rezerwacje i bilety do nabycia na miejscu</p>
+                                <p class="description"> lorem ipsum itp. ipsuper juices and from the best ipsum lorem ora
+                                    nges, onsum super juices and from the best ipsum ipsuper juices and from the best ip
+                                    sum lorem oranges, onsum super juices and from the best ipsum lo
+                                    ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from t
+                                    ipsuper juices and from the best ipsum lorem oranges, onsum super juices and from the best ipsum lo
+                                    he best ipsum lolo"
+                                </p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section class="flex-col" id="kontakt">
+                        <div class="lightBackground flex-col">
+                            <h1 class="bottomBorder centerContent">Skontaktuj się z nami</h1>
+                            <div>
+                            <div class="flex-col centerContent contactForm">
+                                <input type="text" id="name" placeholder="Tutaj wpisz swoje imię">
+                                <input type="email" id="mail" placeholder="Tutaj wpisz swój email">
+                                <textarea id="message" placeholder="Napisz do nas, a na pewno się do Ciebie odezwiemy :)"></textarea>
+                                <input type="submit" id="send" value="Wyślij wiadomość" class="simpleButton">
+                            </div>
+                            <div class="flex-col centerContent contactForm">
+                                <h2>Bistro "Daisy" <br> Dorota Kamila Kicka</h2>
+                                <p>Zakład Przyrodoleczniczy<br> ul. Sienkiewicza 1 <br> 58 -310 Szczawno-Zdrój</p>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
 
 
                 </main>

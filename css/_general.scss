@@ -27,6 +27,7 @@ body * {
   flex-direction: column;
 }
 
+
 .centerContent {
   justify-content: center;
   align-items: center;
@@ -36,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: $large;
   padding: 0.5em 0.5em 0.2em 0.5em;
   justify-content: center;
+  text-align: center;
 }
 
 p {
@@ -43,4 +45,6 @@ p {
   padding: 1em;
   text-align: center;
 }
+
+
 

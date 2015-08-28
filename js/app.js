@@ -2,16 +2,6 @@ $(document).ready(function(){
 
     // functions //
 
-
-
-
-
-
-
-    //$('main .flex-col:eq(0)').animate({left:'0'},2500);
-    //$('main .flex-col:last-child').animate({right:'0'},2500)
-
-
     $( "header li" ).hover(
         function() {
             $(this).css({
@@ -38,19 +28,6 @@ $(document).ready(function(){
         }
     );
 
-    $( "img" ).hover(
-        function() {
-            $(this).transition({scale:(1.4)});
-
-        }, function() {
-            $(this).transition({scale:(1)});
-        }
-    );
-
-
-
-
-
 
 
 
@@ -60,6 +37,10 @@ $(document).ready(function(){
     var position_2 = $('#menu').offset().left;
     var position_3 = $('#galeria').offset().left;
     var position_4 = $('#historia').offset().left;
+    var position_5 = $('#atelier').offset().left;
+    var position_6 = $('#kontakt').offset().left;
+
+
 
     var leftPos = position_2 - position_1;
 
@@ -69,13 +50,19 @@ $(document).ready(function(){
         position_2 = $('#menu').offset().left;
         position_3 = $('#galeria').offset().left;
         position_4 = $('#historia').offset().left;
+        position_5 = $('#atelier').offset().left;
+        position_6 = $('#kontakt').offset().left;
 
         leftPos = position_2 - position_1;
     });
 
+    var wheelCounter = 0;
 
         $(window).on('mousewheel', function (){
             event.preventDefault();
+
+            wheelCounter += 1;
+            console.log(wheelCounter);
             var delta = - (Math.max(-1, Math.min(1, (window.event.wheelDelta || -window.event.detail))));
             var scrollDist = 0;
             if (delta > 0) {
@@ -83,9 +70,10 @@ $(document).ready(function(){
             } else {
                  scrollDist = $('#visibleRange').scrollLeft() - leftPos;
             }
-           scrolling(scrollDist)
+            if (wheelCounter == 1) {
+                scrolling(scrollDist)
+            }
            });
-
 
     $('#linkHome').on('click', function () {
       scrolling(0)
@@ -102,49 +90,127 @@ $(document).ready(function(){
     $('#linkHistoria').on('click', function () {
        scrolling(position_4-position_1)
     });
+    $('#linkAtelier').on('click', function () {
+        scrolling(position_5-position_1)
+    });
+    $('.linkKontakt').on('click', function () {
+        scrolling(position_6-position_1)
+    });
 
 
-function scrolling (distance) {
-    $('#visibleRange').animate({
-        scrollLeft: distance
-    })
+
+
+    function scrolling(distance) {
+        $('#visibleRange').animate({
+            scrollLeft: distance
+        }, function () {
+            wheelCounter = 0
+        })
+    }
+
+// gallery
+
+    var gallery = [
+        ['images/food/pomodore.jpg', 'Super podpis nr1'],
+        ['images/food/sandwich2.jpg', 'Super ggf nr2'],
+        ['images/food/pomodore.jpg', 'Super podsgpis nr3'],
+        ['images/food/sandwich2.jpg', 'Super dg nr4'],
+        ['images/food/pomodore.jpg', 'Super podpagis nr5'],
+        ['images/food/sandwich2.jpg', 'Super podddpis nr6'],
+        ['images/food/sandwich2.jpg', 'Super podddpis nr6'],
+        ['images/food/sandwich2.jpg', 'Super podddpis nr6']
+    ];
+
+    $('.currentPhoto').attr('src',gallery[0][0]);
+    $('.currentParagraph').text(gallery[0][1]);
+
+    var counter = 0;
+
+    $('#galleryRight').on('click',
+        function (){
+            counter += 1;
+            if (counter === gallery.length) {
+                counter = 0;
+            }
+            photoChange();
+    });
+
+    $('#galleryLeft').on('click',
+        function (){
+            counter -= 1;
+            if (counter === -1) {
+                counter = gallery.length - 1;
+            }
+            photoChange();
+
+        });
+
+    $( "#galeria img" ).on('click',
+        function() {
+            var clicks = $(this).data('clicks');
+            if (clicks) {
+                $(this).parent('.flex-col').transition({scale:(1)});
+                $(this).parent('.flex-col').parent().parent().transition({scale:(1)});
+
+            } else {
+                $(this).parent('.flex-col').transition({scale:(5.5)});
+                $(this).parent('.flex-col').parent().parent().transition({scale:(0.3)});
+
+            }
+            $(this).data("clicks", !clicks);
+        });
+
+    $("#galeria img").hover(
+        function() {
+            $(this).transition({scale:(1.05)});
+
+        }, function() {
+            $(this).transition({scale:(1)})
+        }
+    );
+
+    for (var i = 0; i < gallery.length; i++){
+        $('.bulletContainer').append('<div class="bullet"></div>');
+    }
+
+    $('.bullet').on('click',function(){
+        counter = $(this).index();
+        photoChange();
+    });
+
+
+function photoChange() {
+    $('.currentPhoto').fadeOut(function(){
+        $('.currentPhoto').attr('src', gallery[counter][0]);
+        $('.currentParagraph').text(gallery[counter][1]);
+        $('.currentPhoto').fadeIn();
+
+        $('.bullet').css({backgroundColor: 'white'})
+        $('.bullet:eq(' + counter + ')')
+            .fadeOut(function(){
+                $(this).css({backgroundColor: '#005f50'})
+            }).fadeIn();
+    });
 }
 
 
+//atelier list
 
-  //changing background
+    $('.wystawa').on('click', function(){
+        var thisP =  $(this).children('.description');
+        thisP.slideToggle('slow');
+        $('.description').not(thisP).slideUp('slow')
+    });
 
-    //var body = $('body');
-    //console.log(body)
-    //var backgroundList = [
-    //    'url("./images/jumbojumbo.jpg")',
-    //    'url("./images/homeBack.jpg")',
-    //    'url("./images/logo.jumbojumbo.jpg")'
-    //
-    //];
-    //var current = 0;
-    //
-    //function nextBackground() {
-    //    body.css({
-    //    backgroundImage: backgroundList[current = ++current % backgroundList.length]
-    //});
-    //    setTimeout(nextBackground, 1000);
-    //}
-    //
-    //setTimeout(nextBackground, 1000);
-    //body.css({
-    //    backgroundImage: backgroundList[0]
-    //})
+    $( ".wystawa" ).hover(
+        function() {
+            $(this).transition({scale:(1.05)},100);
 
+        }, function() {
+            $(this).transition({scale:(1)});
 
-
-
-
-
-
-
-
-
+        }
+    );
 
 
 

@@ -1,0 +1,19 @@
+#atelier {
+  h4 {
+
+  }
+  p {
+    padding-bottom: 0.2em;
+  }
+  .caption {
+    padding: 0 1.5em 2em 6em;
+    font-size: $small;
+    text-align: left;
+  }
+  .description {
+    font-size: $small;
+    padding: 0 5em 3em 6em;
+    display: none;
+    text-align: left;
+  }
+}

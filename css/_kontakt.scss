@@ -1,0 +1,39 @@
+
+#kontakt {
+  .contactForm {
+    width: 50%;
+  }
+}
+
+
+#name {
+  height: 3em;
+  width: 80%;
+  padding: 1em;
+  margin-top: 0.5em;
+  font-family: $boldFont;
+  font-size: $normal;
+
+}
+#mail {
+  height: 3em;
+  width: 80%;
+  padding: 1em;
+  margin-top: 0.5em;
+  font-family: $boldFont;
+  font-size: $normal;
+
+}
+#message {
+  width: 80%;
+  max-width: 80%;
+  max-height: 10em;
+  padding: 1em;
+  margin-top: 0.5em;
+  font-family: $mainFont;
+  font-size: $normal;
+
+}
+#send {
+  width: 60%;
+}
